@@ -1,0 +1,133 @@
+.success-page {
+  margin: 50px 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #52c41a;
+  margin-bottom: 20px;
+}
+
+.success-content h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Sipariş Özeti Kartı Stilleri */
+.order-summary-card {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.order-id, .order-date {
+  margin: 5px 0;
+  color: #666;
+}
+
+.ant-list-item {
+  padding: 15px 0;
+}
+
+.ant-list-item-meta-title {
+  font-size: 16px;
+  margin-bottom: 5px !important;
+}
+
+.ant-list-item-meta-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.item-total {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.order-totals {
+  padding: 15px 0;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.grand-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .success-content {
+    padding: 0 15px;
+  }
+  
+  .success-icon {
+    font-size: 60px;
+  }
+  
+  .success-content h2 {
+    font-size: 22px;
+  }
+  
+  .order-summary-card {
+    margin-top: 15px;
+  }
+} 

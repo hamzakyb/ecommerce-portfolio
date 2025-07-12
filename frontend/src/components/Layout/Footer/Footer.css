@@ -1,0 +1,372 @@
+/* Modern ve şık footer stilleri */
+.footer {
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Üst Footer bölümü */
+.footer-top {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .col-3 {
+  flex-basis: 23%;
+}
+
+/* Footer marka bölümü */
+.footer-brand .logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #1367ef;
+}
+
+.footer-brand p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #1367ef;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Footer linkler bölümü */
+.footer-links h4,
+.footer-newsletter h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links h4::after,
+.footer-newsletter h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #1367ef;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-links ul li a::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #1367ef;
+  font-weight: bold;
+}
+
+.footer-links ul li a:hover {
+  color: #1367ef;
+  transform: translateX(5px);
+}
+
+/* Bülten abone bölümü */
+.footer-newsletter p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.newsletter-form .form-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: #1367ef;
+}
+
+.btn-subscribe {
+  padding: 0 20px;
+  background-color: #1367ef;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+  background-color: #0e5cdb;
+}
+
+.contact-info {
+  margin-top: 25px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #1367ef;
+  font-size: 16px;
+}
+
+/* Orta Footer bölümü - Özellikler */
+.footer-middle {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  flex-basis: 23%;
+}
+
+.feature-item i {
+  font-size: 30px;
+  color: #1367ef;
+  margin-right: 15px;
+}
+
+.feature-item h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Alt Footer bölümü */
+.footer-bottom {
+  padding: 20px 0;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 15px;
+}
+
+.payment-methods i {
+  font-size: 28px;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.payment-methods i:hover {
+  color: #1367ef;
+  transform: translateY(-3px);
+}
+
+/* Footer karanlık mod stilleri */
+.footer-dark {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.footer-dark .footer-brand .logo h2 {
+  color: #60a5fa;
+}
+
+.footer-dark .footer-brand p {
+  color: #bbb;
+}
+
+.footer-dark .social-links a {
+  background-color: #333;
+  color: #bbb;
+}
+
+.footer-dark .social-links a:hover {
+  background-color: #60a5fa;
+  color: #fff;
+}
+
+.footer-dark .footer-links h4::after,
+.footer-dark .footer-newsletter h4::after {
+  background-color: #60a5fa;
+}
+
+.footer-dark .footer-links ul li a {
+  color: #bbb;
+}
+
+.footer-dark .footer-links ul li a::before {
+  color: #60a5fa;
+}
+
+.footer-dark .footer-links ul li a:hover {
+  color: #60a5fa;
+}
+
+.footer-dark .footer-newsletter p {
+  color: #bbb;
+}
+
+.footer-dark .newsletter-form input {
+  background-color: #333;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.footer-dark .btn-subscribe {
+  background-color: #60a5fa;
+}
+
+.footer-dark .btn-subscribe:hover {
+  background-color: #3b82f6;
+}
+
+.footer-dark .contact-info i {
+  color: #60a5fa;
+}
+
+.footer-dark .feature-item i {
+  color: #60a5fa;
+}
+
+.footer-dark .feature-item p {
+  color: #bbb;
+}
+
+.footer-dark .payment-methods i {
+  color: #888;
+}
+
+.footer-dark .payment-methods i:hover {
+  color: #60a5fa;
+}
+
+.footer-dark .footer-middle,
+.footer-dark .footer-top {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive tasarım */
+@media (max-width: 992px) {
+  .footer .col-3 {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+  }
+  
+  .feature-item {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .feature-item {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .col-3 {
+    flex-basis: 100%;
+  }
+  
+  .newsletter-form .form-group {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-subscribe {
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px;
+  }
+}
+  
+  

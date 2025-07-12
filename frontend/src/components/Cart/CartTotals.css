@@ -1,0 +1,334 @@
+.cart-totals h2 {
+  color: black;
+}
+
+.cart-totals-title {
+  color: black;
+}
+
+.cart-totals-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.cart-totals-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.cart-totals-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 32px 48px 24px 32px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+  min-width: 320px;
+}
+
+.cart-totals-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+.cart-icon {
+  font-size: 32px;
+  color: #1890ff;
+  background: rgba(24, 144, 255, 0.08);
+  padding: 16px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.cart-totals-card:hover .cart-icon {
+  transform: scale(1.08) rotate(5deg);
+  background: rgba(24, 144, 255, 0.12);
+}
+
+.cart-totals-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1a1a1a;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.cart-totals-content {
+  padding: 0 24px;
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  margin: 4px 0;
+}
+
+.totals-row:hover {
+  background: rgba(0, 0, 0, 0.02);
+  padding: 20px 16px;
+  margin: 4px -16px;
+}
+
+.totals-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.totals-value {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.01);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.totals-divider {
+  margin: 8px 0;
+  border-color: rgba(0, 0, 0, 0.03);
+}
+
+.discount .totals-label {
+  color: #c62828;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.discount-amount {
+  color: #c62828;
+  font-weight: 500;
+  background: #fff5f5;
+  padding: 3px 12px;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 12.5px;
+  min-width: 80px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.01em;
+  border: 1px solid #ffe0e0;
+}
+
+.grand-total {
+  margin: 24px -16px 0;
+  padding: 24px 16px;
+  background: #f8fafc;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.grand-total::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+.grand-total .totals-label {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.grand-total-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1890ff;
+  background: rgba(24, 144, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 10px;
+}
+
+.cart-totals-footer {
+  margin-top: 32px;
+  padding: 32px;
+  background: #f8fafc;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.cart-totals-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+.checkout-button {
+  height: 56px;
+  font-size: 17px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.checkout-button:hover {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(24, 144, 255, 0.3);
+}
+
+.checkout-button:hover::after {
+  opacity: 1;
+}
+
+/* Karanlık tema desteği */
+.theme-dark .cart-totals-card {
+  background: #1a1f2e;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .cart-totals-header {
+  background: linear-gradient(135deg, #1f2937 0%, #1a1f2e 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .cart-totals-header::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.theme-dark .cart-totals-header h2 {
+  color: #f8fafc;
+}
+
+.theme-dark .totals-label {
+  color: #cbd5e1;
+}
+
+.theme-dark .totals-value {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .totals-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.theme-dark .totals-divider {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .grand-total {
+  background: #1f2937;
+}
+
+.theme-dark .grand-total::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.theme-dark .grand-total .totals-label {
+  color: #f8fafc;
+}
+
+.theme-dark .cart-totals-footer {
+  background: #1f2937;
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .cart-totals-footer::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .cart-totals-card {
+    margin: 16px;
+    border-radius: 20px;
+    max-width: none;
+  }
+  
+  .cart-totals-header {
+    padding: 18px 8px;
+    min-width: 220px;
+  }
+  
+  .cart-totals-header h2 {
+    font-size: 17px;
+  }
+  
+  .cart-icon {
+    font-size: 28px;
+    padding: 14px;
+  }
+  
+  .cart-totals-content {
+    padding: 0 10px;
+  }
+  
+  .totals-label {
+    font-size: 13px;
+  }
+  
+  .totals-value {
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+  
+  .grand-total-amount {
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+  
+  .checkout-button {
+    height: 50px;
+    font-size: 16px;
+  }
+  
+  .cart-totals-footer {
+    padding: 24px 20px;
+  }
+  
+  .discount-amount {
+    font-size: 11px;
+    padding: 2px 8px;
+    min-width: 60px;
+  }
+} 

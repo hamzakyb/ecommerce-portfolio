@@ -1,0 +1,134 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: #007bff;
+}
+
+.logo i {
+  font-size: 26px;
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.logo span {
+  letter-spacing: 0.5px;
+}
+
+/* Karanlık mod için logo stilleri */
+.theme-dark .logo {
+  color: #f0f0f0;
+}
+
+.theme-dark .logo i {
+  color: #60a5fa;
+}
+
+.theme-dark .logo:hover {
+  color: #60a5fa;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-button,
+.cart-button,
+.profile-button,
+.logout-button,
+.login-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.search-button:hover,
+.cart-button:hover,
+.profile-button:hover,
+.logout-button:hover,
+.login-button:hover {
+  color: #007bff;
+}
+
+/* Mobil görünüm için medya sorguları */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-wrapper {
+    height: 60px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .search-button,
+  .cart-button,
+  .profile-button,
+  .logout-button,
+  .login-button {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+} 

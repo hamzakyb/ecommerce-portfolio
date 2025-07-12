@@ -1,0 +1,777 @@
+/* Kupon Listesi Sayfası - Modern Tasarım */
+.coupon-page {
+  padding: 4px 16px;
+  background-color: #f9fafb;
+  color: #111827;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 {
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-right: auto;
+}
+
+.create-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 14px;
+  min-width: 170px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.create-button i {
+  font-size: 1.1em;
+}
+
+.create-button:hover {
+  background-color: #1746a2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Yeni eklenen araç çubuğu */
+.coupon-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  color: #1f2937;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.clear-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 3px;
+  line-height: 1;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.clear-search:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.coupon-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-item {
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 1px;
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Tablo kapsayıcı */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.coupons-table {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 16px 10px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+th.sortable {
+  cursor: pointer;
+  position: relative;
+  padding-right: 24px;
+  user-select: none;
+}
+
+th.sortable:hover {
+  background-color: #e5e7eb;
+}
+
+/* Modern kupon kartı görünümü */
+tbody tr {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(24,144,255,0.06);
+  transition: box-shadow 0.2s, background 0.2s;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+tbody tr:hover {
+  background: #f5faff;
+  box-shadow: 0 4px 18px rgba(24,144,255,0.13);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.coupon-code {
+  display: flex;
+  align-items: center;
+}
+
+.code-value {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+.discount-value {
+  font-weight: 600;
+  color: #10b981;
+  font-size: 1.01rem;
+}
+
+.status {
+  font-size: 0.98rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+.active {
+  background: #e0f7e9;
+  color: #059669;
+}
+
+.inactive {
+  background: #fbe9e9;
+  color: #e74c3c;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-button, .delete-button {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+.edit-button:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.delete-button {
+  background: #fbe9e9;
+  color: #e74c3c;
+}
+
+.delete-button:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.error {
+  color: #b91c1c;
+  padding: 24px;
+  text-align: center;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  margin: 24px 0;
+  border: 1px solid #fecaca;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.error i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.retry-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #2563eb;
+}
+
+/* Boş durum tasarımı - İyileştirilmiş */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 56px 24px;
+  height: 100%;
+  flex: 1;
+  color: #6b7280;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: #9ca3af;
+}
+
+.empty-state p {
+  margin: 6px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.empty-state p:first-of-type {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.clear-button {
+  margin-top: 16px;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+/* Gelişmiş yükleme animasyonu */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #3b82f6;
+  height: 100%;
+}
+
+.spinner-icon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  border-top-color: #3b82f6;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Karanlık mod için stillemeler */
+.theme-dark .coupon-page {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.theme-dark .page-header {
+  border-bottom: 1px solid #374151;
+}
+
+.theme-dark .page-header h1 {
+  color: #f9fafb;
+}
+
+.theme-dark .search-box input {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.theme-dark .search-box input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+.theme-dark .search-icon,
+.theme-dark .clear-search {
+  color: #9ca3af;
+}
+
+.theme-dark .clear-search:hover {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+.theme-dark .stat-item {
+  background-color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .stat-label {
+  color: #9ca3af;
+}
+
+.theme-dark .stat-value {
+  color: #f9fafb;
+}
+
+.theme-dark .coupons-table {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.theme-dark th {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.theme-dark th.sortable:hover {
+  background-color: #2d3748;
+}
+
+.theme-dark td {
+  color: #e5e7eb;
+  border-bottom-color: #374151;
+}
+
+.theme-dark tbody tr:hover {
+  background-color: #2d3748;
+}
+
+.theme-dark .code-value {
+  background-color: #2d3748;
+  color: #e5e7eb;
+}
+
+.theme-dark .discount-value {
+  background-color: #064e3b;
+  color: #d1fae5;
+}
+
+.theme-dark .active {
+  background-color: #065f46;
+  color: #d1fae5;
+}
+
+.theme-dark .inactive {
+  background-color: #7f1d1d;
+  color: #fee2e2;
+}
+
+.theme-dark .clear-button {
+  background-color: #2d3748;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.theme-dark .clear-button:hover {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+.theme-dark .empty-icon {
+  color: #6b7280;
+}
+
+.theme-dark .empty-state p:first-of-type {
+  color: #f9fafb;
+}
+
+.theme-dark .empty-state {
+  color: #9ca3af;
+}
+
+.theme-dark .error {
+  background-color: #7f1d1d;
+  border-color: #b91c1c;
+  color: #fee2e2;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .coupon-page {
+    padding: 4px 12px;
+  }
+  
+  .page-header {
+    height: auto;
+    min-height: 40px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .page-header h1 {
+    line-height: 30px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+  
+  .create-button {
+    margin-top: 5px;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .coupon-tools {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .search-box {
+    max-width: 100%;
+  }
+  
+  .coupon-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .stat-item {
+    flex: 1;
+  }
+  
+  th, td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .edit-button, .delete-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .coupon-page {
+    padding: 4px 8px;
+  }
+  
+  .page-header h1 {
+    font-size: 16px;
+  }
+  
+  th, td {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+  
+  .code-value {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+  
+  .discount-value {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+  
+  .status {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+  
+  .empty-state {
+    padding: 20px 12px;
+  }
+  
+  .empty-state p:first-child {
+    font-size: 16px;
+  }
+  
+  .stat-item {
+    padding: 4px 8px;
+    min-width: 0;
+  }
+  
+  .stat-label {
+    font-size: 10px;
+  }
+  
+  .stat-value {
+    font-size: 13px;
+  }
+  
+  .search-box::before {
+    left: 10px;
+  }
+  
+  .search-box input {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  th, td {
+    font-size: 14px;
+    padding: 12px 6px;
+  }
+  .coupon-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .coupon-card {
+    padding: 16px 8px 12px 8px;
+    max-width: 98vw;
+  }
+  .page-header h1 {
+    font-size: 18px;
+  }
+  .create-button {
+    font-size: 13px;
+    padding: 9px 16px;
+    min-width: 120px;
+  }
+}
+@media (max-width: 700px) {
+  .table-container, .coupons-table, table, thead, tbody, tr, th, td {
+    display: block;
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  tbody tr {
+    margin-bottom: 18px;
+    box-shadow: 0 2px 10px rgba(24,144,255,0.10);
+    border-radius: 12px;
+    background: #fff;
+    padding: 10px 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  td {
+    background: none;
+    box-shadow: none;
+    padding: 8px 2px;
+    font-size: 0.97rem;
+    border: none;
+  }
+  .actions {
+    margin-top: 8px;
+    gap: 10px;
+  }
+}
+
+.coupon-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 28px;
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+.coupon-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(24,144,255,0.10);
+  padding: 28px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s, background 0.2s;
+  border: 1px solid #e5e7eb;
+  min-width: 0;
+  max-width: 520px;
+}
+.coupon-card:hover {
+  background: #f5faff;
+  box-shadow: 0 4px 24px rgba(24,144,255,0.16);
+}
+.coupon-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.coupon-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.coupon-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.coupon-date {
+  font-size: 13px;
+  color: #888;
+}
+.coupon-desc {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+@media (max-width: 700px) {
+  .coupon-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .coupon-card {
+    padding: 15px 8px 12px 8px;
+  }
+}
+
+/* Admin layout için footer fix */
+.admin-layout .site-layout-background {
+  background-color: #f9fafb !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 20px !important;
+  min-height: calc(100vh - 64px) !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.theme-dark .admin-layout .site-layout-background {
+  background-color: #111827 !important;
+} 

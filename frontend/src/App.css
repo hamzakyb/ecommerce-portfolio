@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff; /* Yeni arka plan rengi (beyaz) */
+}
+
+/* Karanlık mod stilleri */
+body.theme-dark {
+  background-color: #141414;
+  color: #e0e0e0;
+}
+
+body.theme-dark h2 {
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-table {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Daha detaylı tablo stilleri */
+body.theme-dark .ant-table-thead > tr > th {
+  background-color: #252525;
+  color: #e0e0e0;
+  border-bottom: 1px solid #303030;
+}
+
+body.theme-dark .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #303030;
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-table-tbody > tr:hover > td {
+  background-color: #2a2a2a !important;
+}
+
+body.theme-dark .ant-table-row-expand-icon {
+  border-color: #505050;
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-pagination-item {
+  background-color: #1f1f1f;
+  border-color: #303030;
+}
+
+body.theme-dark .ant-pagination-item a {
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-pagination-item-active {
+  border-color: #1890ff;
+}
+
+body.theme-dark .ant-pagination-prev .ant-pagination-item-link,
+body.theme-dark .ant-pagination-next .ant-pagination-item-link {
+  background-color: #1f1f1f;
+  border-color: #303030;
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-pagination-disabled .ant-pagination-item-link {
+  color: #666;
+  border-color: #303030;
+}
+
+/* Buton stilleri */
+body.theme-dark .ant-btn {
+  color: #e0e0e0;
+  background-color: #1f1f1f;
+  border-color: #303030;
+}
+
+body.theme-dark .ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: #fff;
+}
+
+body.theme-dark .ant-btn-primary[disabled],
+body.theme-dark .ant-btn-primary[disabled]:hover,
+body.theme-dark .ant-btn-primary[disabled]:focus,
+body.theme-dark .ant-btn-primary[disabled]:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(24, 144, 255, 0.3);
+  border-color: rgba(24, 144, 255, 0.3);
+}
+
+body.theme-dark .ant-btn-dangerous,
+body.theme-dark .ant-btn-primary.danger {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  color: #fff;
+}
+
+/* Tag stilleri */
+body.theme-dark .ant-tag {
+  background-color: #252525;
+  border-color: #303030;
+  color: #e0e0e0;
+}
+
+/* Tooltip ve Popover stilleri */
+body.theme-dark .ant-tooltip-inner {
+  background-color: #252525;
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-popover-inner {
+  background-color: #252525;
+}
+
+body.theme-dark .ant-popover-title {
+  color: #e0e0e0;
+  border-bottom-color: #303030;
+}
+
+body.theme-dark .ant-popover-inner-content {
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-popover-arrow-content {
+  background-color: #252525;
+}
+
+/* Form elemanları */
+body.theme-dark .ant-form-item-label > label {
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-input {
+  background-color: #1f1f1f;
+  border-color: #303030;
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-input:hover {
+  border-color: #1890ff;
+}
+
+body.theme-dark .ant-input:focus,
+body.theme-dark .ant-input-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+body.theme-dark .ant-input-affix-wrapper {
+  background-color: #1f1f1f;
+  border-color: #303030;
+  color: #e0e0e0;
+}
+
+body.theme-dark .ant-cart-totals h2 {
+  color: #e0e0e0;
+}
+
+body.theme-dark .section-title h2 {
+  color: #e0e0e0;
+}
+
+h2 {
+  color: #000000; /* Başlık rengi */
+}
+
+.table {
+  margin: 20px; /* Tablo için kenar boşluğu */
+}
+
+.ant-table {
+  background: white; /* Ant Design tablosunun arka plan rengi */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 0.8;
+  margin-bottom: 4px;
+}
+
+/* Blog Page */
+
+.blog-page{
+   margin-top: 40px;
+}
+
+.cart-totals h2 {
+  color: black; /* Sepet toplamı yazısının rengi siyah yapıldı */
+}

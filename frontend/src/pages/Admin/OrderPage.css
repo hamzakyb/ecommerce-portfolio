@@ -1,0 +1,168 @@
+.ant-table {
+  border-radius: 8px; /* Tablo köşe yuvarlama */
+  overflow: hidden; /* Taşma durumunda gizleme */
+  margin-top: 20px; /* Tablo için üst boşluk */
+}
+
+.ant-table th {
+  background-color: #f5f5f5; /* Başlık arka plan rengi */
+  color: #333; /* Başlık yazı rengi */
+}
+
+.ant-table td {
+  padding: 12px; /* Hücre içi boşluk */
+}
+
+.ant-btn {
+  margin-right: 8px; /* Butonlar arasında boşluk */
+}
+
+.ant-modal-body {
+  padding: 20px; /* Modal içeriği için boşluk */
+}
+
+.ant-modal-title {
+  font-size: 24px; /* Başlık boyutu */
+  font-weight: bold; /* Başlık kalınlığı */
+}
+
+/* Modal footer stilleri */
+.ant-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.ant-modal-footer button {
+  margin-left: 8px;
+  padding: 0 15px;
+  height: 38px;
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  transition: all 0.3s ease;
+}
+
+.ant-modal-footer button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ant-modal-footer button.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: white;
+}
+
+.ant-modal-footer button.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* Butonların stilleri */
+.ant-btn-primary {
+  background-color: #1890ff; /* Ana buton rengi */
+  border-color: #1890ff; /* Ana buton kenar rengi */
+  font-weight: 500; /* Yazı kalınlığı */
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045); /* Gölge efekti */
+}
+
+.ant-btn-danger {
+  background-color: #ff4d4f; /* Tehlikeli buton rengi */
+  border-color: #ff4d4f; /* Tehlikeli buton kenar rengi */
+}
+
+.ant-btn-default {
+  background-color: #f0f0f0; /* Varsayılan buton rengi */
+  border-color: #d9d9d9; /* Varsayılan buton kenar rengi */
+}
+
+/* Sipariş Detayları Modal Stilleri */
+.order-details-container {
+  padding: 10px;
+}
+
+.order-section,
+.customer-section,
+.products-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-section h3,
+.customer-section h3,
+.products-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #1890ff;
+}
+
+.order-info,
+.customer-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.coupon-info {
+  grid-column: span 2;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f7ff;
+  border-radius: 4px;
+  border-left: 3px solid #1890ff;
+}
+
+.order-search-box {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-search-box input {
+  width: 420px;
+  max-width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: border-color 0.2s;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.order-search-box input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24,144,255,0.1);
+}
+
+@media (max-width: 600px) {
+  .order-search-box {
+    justify-content: center;
+    padding: 0 8px;
+  }
+  .order-search-box input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-info,
+  .customer-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .coupon-info {
+    grid-column: span 1;
+  }
+} 
+

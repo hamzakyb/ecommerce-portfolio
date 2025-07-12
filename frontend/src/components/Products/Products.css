@@ -1,0 +1,46 @@
+.products {
+  margin: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 0.8;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #777;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .products-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

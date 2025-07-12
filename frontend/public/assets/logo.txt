@@ -1,0 +1,5 @@
+Bu dosya, gerçek bir logo dosyası için yer tutucudur.
+Lütfen bu dosyayı bir PNG veya JPG formatında gerçek bir logo dosyasıyla değiştirin.
+Önerilen boyut: 200x80 piksel.
+
+Logo dosyasını değiştirdikten sonra, PDF faturalarınızda otomatik olarak görünecektir.

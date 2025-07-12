@@ -1,0 +1,5 @@
+// Bu dosya bir MP3 ses dosyasıdır.
+// Gerçek bir MP3 dosyası eklemek için, bir ses dosyasını indirip
+// frontend/public/notification-sound.mp3 konumuna yerleştirmeniz gerekir.
+// Örneğin: https://mixkit.co/free-sound-effects/notification/ adresinden
+// ücretsiz bir bildirim sesi indirebilirsiniz. 

@@ -1,0 +1,465 @@
+.user-page-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.user-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-page-header h1 {
+  margin: 0;
+  color: #1890ff;
+}
+
+.ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-modal-content {
+  border-radius: 8px;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+.ant-btn-primary {
+  height: 40px;
+  font-size: 16px;
+}
+
+.ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f5f5f5;
+}
+
+.user-detail-container {
+  padding: 20px;
+}
+
+.user-detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-avatar {
+  margin-right: 20px;
+}
+
+.user-basic-info h2 {
+  margin: 0 0 8px 0;
+  color: #1890ff;
+}
+
+.user-basic-info p {
+  margin: 0 0 8px 0;
+  color: #666;
+}
+
+.account-summary-container {
+  padding: 20px;
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.account-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.account-status {
+  margin-left: 16px;
+}
+
+.ant-descriptions {
+  margin-bottom: 20px;
+}
+
+.ant-descriptions-item-label {
+  font-weight: bold;
+  width: 150px;
+}
+
+.ant-divider-with-text {
+  margin: 24px 0;
+  color: #1890ff;
+  font-weight: bold;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .user-detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .ant-descriptions-item-label,
+  .ant-descriptions-item-content {
+    padding: 8px;
+  }
+}
+
+/* Muhasebe Modalı Stilleri */
+.account-summary-cards {
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.summary-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.account-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.payments-container {
+  padding: 20px;
+}
+
+.payment-form-container {
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Karanlık Mod Stillemeleri */
+.theme-dark .ant-modal-content {
+  background-color: #1f2937;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-dark .ant-modal-header {
+  background-color: #1f2937;
+  border-bottom: 1px solid #374151;
+}
+
+.theme-dark .ant-modal-title {
+  color: #f9fafb;
+}
+
+.theme-dark .ant-modal-close {
+  color: #d1d5db;
+}
+
+.theme-dark .ant-modal-close:hover {
+  color: #f9fafb;
+}
+
+.theme-dark .ant-modal-body {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.theme-dark .ant-modal-footer {
+  background-color: #1f2937;
+  border-top: 1px solid #374151;
+}
+
+/* Kullanıcı Detayları Modalı */
+.theme-dark .user-detail-container {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.theme-dark .user-basic-info h2 {
+  color: #60a5fa;
+}
+
+.theme-dark .user-basic-info p {
+  color: #d1d5db;
+}
+
+.theme-dark .ant-descriptions {
+  color: #f9fafb;
+}
+
+.theme-dark .ant-descriptions-bordered .ant-descriptions-item-label {
+  background-color: #111827;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.theme-dark .ant-descriptions-bordered .ant-descriptions-item-content {
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.theme-dark .ant-descriptions-bordered .ant-descriptions-row {
+  border-bottom-color: #374151;
+}
+
+.theme-dark .ant-divider {
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.theme-dark .ant-divider-with-text {
+  color: #60a5fa;
+  border-color: #374151;
+}
+
+/* Muhasebe Modalı */
+.theme-dark .account-summary-container {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.theme-dark .account-user-info .ant-typography {
+  color: #f9fafb;
+}
+
+.theme-dark .summary-card {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+.theme-dark .summary-card .ant-statistic-title {
+  color: #d1d5db;
+}
+
+.theme-dark .account-form {
+  background-color: #111827;
+  border: 1px solid #374151;
+}
+
+.theme-dark .payment-form {
+  background-color: #111827;
+  border: 1px solid #374151;
+}
+
+.theme-dark .ant-form-item-label > label {
+  color: #f9fafb;
+}
+
+.theme-dark .ant-input,
+.theme-dark .ant-input-number,
+.theme-dark .ant-picker,
+.theme-dark .ant-select-selector {
+  background-color: #2d3748 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+.theme-dark .ant-input-number-handler-wrap {
+  background-color: #1f2937;
+  border-color: #4b5563;
+}
+
+.theme-dark .ant-select-arrow,
+.theme-dark .ant-picker-suffix {
+  color: #d1d5db;
+}
+
+.theme-dark .ant-input::placeholder,
+.theme-dark .ant-select-selection-placeholder {
+  color: #9ca3af !important;
+}
+
+.theme-dark .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+  background-color: #2d3748;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.theme-dark .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.theme-dark .ant-tabs-nav-list {
+  border-bottom-color: #374151;
+}
+
+.theme-dark .ant-input-password-icon {
+  color: #d1d5db;
+}
+
+.theme-dark .ant-table {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.theme-dark .ant-table-thead > tr > th {
+  background-color: #111827;
+  color: #f9fafb;
+  border-bottom-color: #374151;
+}
+
+.theme-dark .ant-table-tbody > tr > td {
+  border-bottom-color: #374151;
+}
+
+.theme-dark .ant-table-tbody > tr:hover > td {
+  background-color: #2d3748;
+}
+
+.theme-dark .ant-pagination-item a {
+  color: #f9fafb;
+}
+
+.theme-dark .ant-pagination-item-active {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.theme-dark .ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.theme-dark .ant-pagination-prev .ant-pagination-item-link,
+.theme-dark .ant-pagination-next .ant-pagination-item-link {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.theme-dark .ant-empty-description {
+  color: #9ca3af;
+}
+
+/* Şifre değiştirme modalı scroll özelliği */
+.ant-modal-body {
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* Şifre değiştirme modalı için özel yükseklik */
+.modal-password-change .ant-modal-body {
+  max-height: 70vh; /* Viewport yüksekliğinin %70'i kadar yükseklik */
+}
+
+.ant-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.ant-modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.ant-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Karanlık tema için scroll özelleştirmesi */
+.theme-dark .ant-modal-body::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.theme-dark .ant-modal-body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.theme-dark .ant-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #606b7d;
+}
+
+/* Tablo kaydırma özellikleri */
+.ant-table-body {
+  overflow-x: auto !important;
+  scrollbar-width: thin;
+}
+
+.ant-table-body::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ant-table-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Karanlık tema için tablo kaydırma çubuğu */
+.theme-dark .ant-table-body::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.theme-dark .ant-table-body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.theme-dark .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #606b7d;
+} 
+
+.user-search-box {
+  margin: 18px 0 18px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.user-search-box input {
+  width: 100%;
+  max-width: 340px;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+  color: #1f2937;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.user-search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.13);
+  outline: none;
+}
+@media (max-width: 700px) {
+  .user-search-box input {
+    max-width: 98vw;
+    font-size: 14px;
+    padding: 9px 8px;
+  }
+} 

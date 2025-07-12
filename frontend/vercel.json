@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://filbackendnew.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://filfrontendnew.vercel.app" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization, X-Requested-With, Accept, Origin, Access-Control-Allow-Headers, X-Request-ID" },
+        { "key": "Access-Control-Allow-Credentials", "value": "true" }
+      ]
+    }
+  ]
+} 
