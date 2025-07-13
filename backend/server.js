@@ -17,8 +17,20 @@ const port = process.env.PORT || 5001;
 const server = http.createServer(app);
 
 // CORS options
+const allowedOrigins = [
+  'https://ecommerce-portfolio-hazel.vercel.app',
+  'http://localhost:5173'
+];
+
 const corsOptions = {
-  origin: ['https://ecommerce-portfolio-hazel.vercel.app/', 'http://localhost:5173'],
+  origin: function (origin, callback) {
+    // local geliştirme için origin olmayabilir
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS policy error: Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: [
     'Content-Type',
@@ -79,7 +91,7 @@ const connect = async () => {
 app.use(logger("dev"));
 app.use(express.json());
 
-// CORS middleware'ini sadeleştir
+// CORS middleware'ini route'lardan önce çağır
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 
