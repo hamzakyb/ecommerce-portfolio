@@ -14,7 +14,6 @@ const CustomerAccount = require('../models/CustomerAccount');
 
 const seedDatabase = async () => {
   try {
-    // MongoDB bağlantısı
     await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
@@ -44,207 +43,188 @@ const seedDatabase = async () => {
     await adminUser.save();
     console.log('Admin kullanıcısı oluşturuldu.');
 
-    // 2. Test kullanıcısı oluştur
-    const testUser = new User({
-      username: 'test',
-      email: 'test@test.com',
+    // 2. B2B müşteri kullanıcısı oluştur
+    const b2bUser = new User({
+      username: 'b2bmusteri',
+      email: 'b2b@firma.com',
       password: hashedPassword,
       role: 'user',
-      avatar: 'https://ui-avatars.com/api/?name=Test+User&background=random'
+      avatar: 'https://ui-avatars.com/api/?name=B2B+Müşteri&background=random'
     });
-    await testUser.save();
-    console.log('Test kullanıcısı oluşturuldu.');
+    await b2bUser.save();
+    console.log('B2B müşteri kullanıcısı oluşturuldu.');
 
-    // 3. Kategoriler oluştur
+    // 3. Kategoriler (Araç Filtreleri)
     const categories = [
       {
-        name: 'Elektronik',
-        img: '/img/categories/categories1.png'
+        name: 'Yağ Filtresi',
+        img: '/img/categories/oil-filter.png'
       },
       {
-        name: 'Giyim',
-        img: '/img/categories/categories2.png'
+        name: 'Hava Filtresi',
+        img: '/img/categories/air-filter.png'
       },
       {
-        name: 'Ev & Yaşam',
-        img: '/img/categories/categories3.png'
+        name: 'Yakıt Filtresi',
+        img: '/img/categories/fuel-filter.png'
       },
       {
-        name: 'Spor',
-        img: '/img/categories/categories4.png'
+        name: 'Polen Filtresi',
+        img: '/img/categories/cabin-filter.png'
       },
       {
-        name: 'Kitap',
-        img: '/img/categories/categories5.png'
-      },
-      {
-        name: 'Kozmetik',
-        img: '/img/categories/categories6.png'
+        name: 'Hidrolik Filtresi',
+        img: '/img/categories/hydraulic-filter.png'
       }
     ];
-
     const savedCategories = await Category.insertMany(categories);
-    console.log('Kategoriler oluşturuldu.');
+    console.log('Araç filtre kategorileri oluşturuldu.');
 
-    // 4. Ürünler oluştur
+    // 4. Ürünler (Filtreler)
     const products = [
       {
-        name: 'iPhone 15 Pro',
+        name: 'Mann Yağ Filtresi W 610/3',
         img: [
-          '/img/products/product1/1.png',
-          '/img/products/product1/2.png',
-          '/img/products/product1/3.png'
+          '/img/products/oil-filter1.png',
+          '/img/products/oil-filter2.png'
         ],
         price: {
-          current: 45000,
-          discount: 42000
+          current: 120,
+          discount: 110
         },
-        category: savedCategories[0]._id, // Elektronik
-        description: 'Apple iPhone 15 Pro 128GB Titanium',
-        stock: 50
+        category: savedCategories[0]._id, // Yağ Filtresi
+        description: 'Mann marka, yüksek performanslı yağ filtresi. Uyumlu: VW, Audi, Seat, Skoda',
+        stock: 500
       },
       {
-        name: 'Samsung Galaxy S24',
+        name: 'Bosch Hava Filtresi S 0240',
         img: [
-          '/img/products/product2/1.png',
-          '/img/products/product2/2.png',
-          '/img/products/product2/3.png'
+          '/img/products/air-filter1.png',
+          '/img/products/air-filter2.png'
         ],
         price: {
-          current: 38000,
-          discount: 35000
+          current: 95,
+          discount: 85
         },
-        category: savedCategories[0]._id, // Elektronik
-        description: 'Samsung Galaxy S24 256GB Phantom Black',
-        stock: 30
+        category: savedCategories[1]._id, // Hava Filtresi
+        description: 'Bosch marka, uzun ömürlü hava filtresi. Uyumlu: Ford, Opel, Renault',
+        stock: 350
       },
       {
-        name: 'Nike Air Max',
+        name: 'Filtron Yakıt Filtresi PP 836/1',
         img: [
-          '/img/products/product3/1.png',
-          '/img/products/product3/2.png',
-          '/img/products/product3/3.png'
+          '/img/products/fuel-filter1.png',
+          '/img/products/fuel-filter2.png'
         ],
         price: {
-          current: 2500,
-          discount: 2200
+          current: 180,
+          discount: 170
         },
-        category: savedCategories[3]._id, // Spor
-        description: 'Nike Air Max 270 Erkek Spor Ayakkabı',
-        stock: 100
-      },
-      {
-        name: 'Adidas T-Shirt',
-        img: [
-          '/img/products/product4/1.png',
-          '/img/products/product4/2.png',
-          '/img/products/product4/3.png'
-        ],
-        price: {
-          current: 300,
-          discount: 250
-        },
-        category: savedCategories[1]._id, // Giyim
-        description: 'Adidas Erkek Spor T-Shirt',
+        category: savedCategories[2]._id, // Yakıt Filtresi
+        description: 'Filtron marka, dizel araçlar için yakıt filtresi. Uyumlu: Peugeot, Citroen',
         stock: 200
       },
       {
-        name: 'MacBook Air M2',
+        name: 'Ufi Polen Filtresi 54.140.00',
         img: [
-          '/img/products/product5/1.png',
-          '/img/products/product5/2.png',
-          '/img/products/product5/3.png'
+          '/img/products/cabin-filter1.png',
+          '/img/products/cabin-filter2.png'
         ],
         price: {
-          current: 35000,
-          discount: 32000
+          current: 75,
+          discount: 70
         },
-        category: savedCategories[0]._id, // Elektronik
-        description: 'Apple MacBook Air M2 13.6" 256GB',
-        stock: 25
+        category: savedCategories[3]._id, // Polen Filtresi
+        description: 'Ufi marka, yüksek filtrasyonlu polen filtresi. Uyumlu: Fiat, Alfa Romeo',
+        stock: 400
+      },
+      {
+        name: 'Sakura Hidrolik Filtresi HC-9020',
+        img: [
+          '/img/products/hydraulic-filter1.png',
+          '/img/products/hydraulic-filter2.png'
+        ],
+        price: {
+          current: 210,
+          discount: 200
+        },
+        category: savedCategories[4]._id, // Hidrolik Filtresi
+        description: 'Sakura marka, endüstriyel hidrolik sistemler için filtre. Uyumlu: Tüm ağır vasıta',
+        stock: 150
       }
     ];
-
     await Product.insertMany(products);
-    console.log('Ürünler oluşturuldu.');
+    console.log('Araç filtre ürünleri oluşturuldu.');
 
-    // 5. Kuponlar oluştur
+    // 5. Kuponlar
     const coupons = [
       {
-        code: 'YENI10',
+        code: 'B2B10',
         discountPercent: 10
       },
       {
-        code: 'INDIRIM20',
-        discountPercent: 20
-      },
-      {
-        code: 'OZEL15',
+        code: 'FILTRE15',
         discountPercent: 15
       }
     ];
-
     await Coupon.insertMany(coupons);
     console.log('Kuponlar oluşturuldu.');
 
-    // 6. Satıcı bilgileri oluştur
+    // 6. Satıcı Bilgisi (B2B Firma)
     const sellerInfo = new SellerInfo({
-      companyName: 'E-Ticaret Mağazası',
-      taxOffice: 'Kadıköy',
+      companyName: 'Dream Filtre',
+      taxOffice: 'Maslak',
       taxNumber: '1234567890',
-      address: 'Atatürk Mahallesi, Ticaret Sokak No:1',
-      cityRegion: 'İstanbul/Kadıköy',
-      phone: '0216 123 45 67',
+      address: 'Maslak Mah. Atatürk Oto Sanayi Sitesi 2. Kısım No:45',
+      cityRegion: 'İstanbul/Sarıyer',
+      phone: '0212 999 99 99',
       vatRate: 18,
       bankName: 'Garanti BBVA',
-      bankBranch: 'Kadıköy Şubesi',
-      iban: 'TR12 3456 7890 1234 5678 9012 34'
+      bankBranch: 'Maslak Şubesi',
+      iban: 'TR12 0006 2000 1234 5678 9012 34'
     });
-
     await sellerInfo.save();
-    console.log('Satıcı bilgileri oluşturuldu.');
+    console.log('Satıcı bilgisi oluşturuldu.');
 
-    // 7. Bildirimler oluştur
+    // 7. Bildirimler
     const notifications = [
       {
-        userId: testUser._id,
+        userId: b2bUser._id,
         title: 'Hoş Geldiniz!',
-        message: 'E-ticaret sitemize hoş geldiniz. İlk siparişinizde %10 indirim kazanın.',
+        message: 'FiltreMarket B2B platformuna hoş geldiniz. İlk siparişinizde %10 indirim kazanın.',
         type: 'info',
         read: false
       },
       {
-        userId: testUser._id,
+        userId: b2bUser._id,
         title: 'Sipariş Durumu',
-        message: 'Siparişiniz kargoya verildi.',
+        message: 'Siparişiniz hazırlanıyor.',
         type: 'success',
         read: false
       }
     ];
-
     await Notification.insertMany(notifications);
     console.log('Bildirimler oluşturuldu.');
 
-    // 8. Müşteri hesap bilgileri oluştur
+    // 8. Müşteri hesap bilgileri
     const customerAccount = new CustomerAccount({
-      userId: testUser._id,
-      balance: 1000,
+      userId: b2bUser._id,
+      balance: 5000,
       transactions: [
         {
           type: 'deposit',
-          amount: 1000,
-          description: 'Başlangıç bakiyesi'
+          amount: 5000,
+          description: 'B2B açılış bakiyesi'
         }
       ]
     });
-
     await customerAccount.save();
     console.log('Müşteri hesap bilgileri oluşturuldu.');
 
     console.log('Veritabanı başarıyla dolduruldu!');
     console.log('\nGiriş bilgileri:');
     console.log('Admin - Email: admin@admin.com, Şifre: admin123');
-    console.log('Test - Email: test@test.com, Şifre: admin123');
+    console.log('B2B Müşteri - Email: b2b@firma.com, Şifre: admin123');
 
   } catch (error) {
     console.error('Hata:', error);

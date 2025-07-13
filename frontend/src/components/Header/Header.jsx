@@ -18,7 +18,7 @@ const Header = () => {
           <div className="header-left">
             <Link to="/" className="logo">
               <i className="bi bi-gear-fill"></i>
-              <span>Step Filtre</span>
+              <span>Dream Filtre</span>
             </Link>
           </div>
           {user ? (

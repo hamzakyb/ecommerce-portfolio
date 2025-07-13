@@ -15,27 +15,20 @@ const Footer = () => {
             <div className="col-3">
               <div className="footer-brand">
                 <div className="logo">
-                  <h2>Step Filtre</h2>
+                  <h2>Dream Filtre</h2>
                 </div>
                 <p>
-                İşletmenizin aradığı filtre çözümleri tek adreste! 
-                B2B platformumuzda endüstriyel kullanımdan özel uygulamalara kadar geniş bir ürün seçeneği bulabilirsiniz. Kalite ve performansı bir araya getiriyoruz.
+                  Araç ve endüstriyel filtrede güvenin adresi! Dream Filtre B2B platformunda yağ, hava, yakıt ve polen filtrelerinde en kaliteli markalar ve hızlı tedarik. Toptan ve kurumsal çözümler için bize ulaşın.
                 </p>
                 <div className="social-links">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <a href="https://facebook.com/dreamfiltre" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i className="bi bi-facebook"></i>
                   </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                    <i className="bi bi-twitter"></i>
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <a href="https://instagram.com/dreamfiltre" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i className="bi bi-instagram"></i>
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                    <i className="bi bi-youtube"></i>
+                  <a href="mailto:info@dreamfiltre.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                    <i className="bi bi-envelope"></i>
                   </a>
                 </div>
               </div>
@@ -73,9 +66,8 @@ const Footer = () => {
                 <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz.</p>
                 
                 <div className="contact-info">
-                  <p><i className="bi bi-telephone"></i> +90 (542) 899 70 08</p>
-                  <p><i className="bi bi-telephone"></i> +90 (543) 715 63 67</p>
-                  <p><i className="bi bi-envelope"></i> info@stepfiltre.com</p>
+                  <p><i className="bi bi-telephone"></i> 0212 999 99 99</p>
+                  <p><i className="bi bi-envelope"></i> info@dreamfiltre.com</p>
                 </div>
               </div>
             </div>
@@ -122,7 +114,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-content">
             <div className="copyright">
-              <p>&copy; {currentYear} Step Filtre. Tüm hakları saklıdır.</p>
+              <p>&copy; {currentYear} Dream Filtre. Tüm hakları saklıdır.</p>
             </div>
             <div className="payment-methods">
               <i className="bi bi-credit-card-2-front-fill" title="Mastercard"></i>

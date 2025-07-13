@@ -58,11 +58,12 @@ const Contact = () => {
                     <div className="contact-info">
                         <div className="contact-info-item">
                             <div className="contact-info-texts">
-                                <strong> Arsuz Şubesi</strong>
+                                <strong> Dream Filtre Merkez</strong>
                                 <p className="contact-street">
-                                Gökmeydan Mah., Atatürk Cad., No:123/A, Arsuz/Hatay</p>
-                                <a href="tel:Phone: +1 1234 567 88">Telefon: +90 542 899 70 08 <br></br> +90 543 715 63 67</a>
-                                <a href="mailto:Email: contact@example.com">Email: stepfiltre@gmail.com</a>
+                                  Maslak Mah. Atatürk Oto Sanayi Sitesi 2. Kısım No:45, Sarıyer/İstanbul
+                                </p>
+                                <a href="tel:+902129999999">Telefon: 0212 999 99 99</a>
+                                <a href="mailto:info@dreamfiltre.com">Email: info@dreamfiltre.com</a>
                             </div>
                         </div>
                         <div className="contact-info-item">

@@ -83,7 +83,7 @@ const AuthPage = () => {
         </form>
         
         <div className="auth-footer">
-          <p>Step Filtre </p>
+          <p>Dream Filtre</p>
         </div>
       </div>
     </div>
