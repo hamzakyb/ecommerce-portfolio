@@ -104,7 +104,7 @@ const DashboardPage = () => {
   return (
     <div className="dashboard-container">
       <Title level={2} style={{ marginBottom: '24px' }}>
-        Step Filtre Yönetim Paneli
+        Dream Filtre Yönetim Paneli
       </Title>
       
       {/* Üst Kartlar - Genel İstatistikler */}

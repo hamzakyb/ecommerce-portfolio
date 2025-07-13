@@ -33,7 +33,7 @@ const AuthPage = () => {
       <div className="auth-container">
         <div className="auth-logo">
           <i className="bi bi-gear-fill"></i>
-          <span>Step Filtre</span>
+          <span>Dream Filtre</span>
         </div>
         <h2>Hoş Geldiniz</h2>
         <p className="auth-subtitle">Lütfen hesabınıza giriş yapın</p>

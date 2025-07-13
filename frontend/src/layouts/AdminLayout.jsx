@@ -422,7 +422,7 @@ const AdminLayout = ({ children }) => {
             className="admin-sidebar"
           >
             <div className="admin-logo">
-              {!collapsed && <span>Step Filtre</span>}
+              {!collapsed && <span>Dream Filtre</span>}
             </div>
             <Menu
               mode="vertical"
