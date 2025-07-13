@@ -92,8 +92,11 @@ app.use(logger("dev"));
 app.use(express.json());
 
 // CORS middleware'ini route'lardan önce çağır
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+app.use(cors({
+  origin: 'https://ecommerce-portfolio-hazel.vercel.app',
+  credentials: true,
+}));
+app.options('*', cors());
 
 // Ana route'ları kullan
 app.use("/api", mainRoute);

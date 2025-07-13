@@ -1,6 +1,6 @@
 export const API_CONFIG = {
-  BASE_URL: 'https://filbackendnew.onrender.com',
-  FRONTEND_URL: 'https://filfrontendnew.vercel.app',
+  BASE_URL: import.meta.env.VITE_API_BASE_URL || 'https://ecommerce-portfolio-wxdy.onrender.com',
+  FRONTEND_URL: import.meta.env.VITE_FRONTEND_URL || 'https://ecommerce-portfolio-hazel.vercel.app',
   API_ENDPOINTS: {
     LOGIN: '/auth/login',
     REGISTER: '/auth/register',
