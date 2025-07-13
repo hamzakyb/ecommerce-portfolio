@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 // CORS options
 const corsOptions = {
-  origin: ['https://filfrontendnew.vercel.app', 'http://localhost:5173'],
+  origin: ['https://ecommerce-portfolio-hazel.vercel.app/', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: [
     'Content-Type',
