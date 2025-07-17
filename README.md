@@ -80,11 +80,11 @@ npm run dev
 ## Demo Giriş Bilgileri
 
 - **Admin:**
-  - E-posta: admin@dreamfiltre.com
-  - Şifre: Admin1234
+  - E-posta: admin@admin.com
+  - Şifre: admin123
 - **Test Kullanıcısı:**
-  - E-posta: test@dreamfiltre.com
-  - Şifre: Test1234
+  - E-posta: b2b@firma.com
+  - Şifre: test123
 
 
 ## Lisans
